@@ -1,0 +1,10 @@
+#ignore
+*.log
+*.jou
+*.tmp
+*.db
+*testbench2.sim/
+*testbench2.runs/
+*testbench2.gen/
+*testbench2.hw/
+*testbench2.cache/

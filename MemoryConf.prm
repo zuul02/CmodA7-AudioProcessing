@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SPIX4
+Size               4M
+Start Address      0x00000000
+End Address        0x003FFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x000ABD03    Jan 19 22:41:17 2025    C:/Users/hmsch/Documents/temp/testbench2/testbench2.runs/impl_1/Top_Module.bit

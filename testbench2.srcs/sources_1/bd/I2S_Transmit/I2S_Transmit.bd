@@ -1,0 +1,25 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../testbench2.gen/sources_1/bd/I2S_Transmit",
+      "name": "I2S_Transmit",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.1"
+    },
+    "design_tree": {
+      "i2s_transmitter_0": ""
+    },
+    "components": {
+      "i2s_transmitter_0": {
+        "vlnv": "xilinx.com:ip:i2s_transmitter:1.0",
+        "ip_revision": "8",
+        "xci_name": "I2S_Transmit_i2s_transmitter_0_0",
+        "xci_path": "ip\\I2S_Transmit_i2s_transmitter_0_0\\I2S_Transmit_i2s_transmitter_0_0.xci",
+        "inst_hier_path": "i2s_transmitter_0"
+      }
+    }
+  }
+}
