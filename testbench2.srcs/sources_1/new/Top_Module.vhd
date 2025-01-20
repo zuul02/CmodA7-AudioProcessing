@@ -15,6 +15,8 @@ generic(width       : integer := 16
         PotiP       : in std_logic;
         PotiN       : in std_logic;
         switch      : in std_logic_vector(4 downto 0);
+        uartRx      : in std_logic;
+        uartTx      : out std_logic;
         muxA        : out std_logic;
         muxB        : out std_logic;
         sclk        : out std_logic;
@@ -79,6 +81,20 @@ Generic(width           : integer := 16
         );
 end component;
 
+component state_monitor_send is
+    Port (
+        CLK100MHZ : in  std_logic;
+        RST       : in  std_logic;
+        sw        : in  std_logic_vector(10 downto 0);
+        btnL      : in  std_logic;
+        btnC      : in  std_logic;
+        btnR      : in  std_logic;
+        btnU      : in  std_logic;
+        UART_TXD  : out std_logic;
+        UART_RXD  : in  std_logic
+    );
+end component;
+
 signal audioRaw         : std_logic_vector((width - 1) downto 0);
 signal audioProcessed   : std_logic_vector((width - 1) downto 0);
 signal combinedChannel  : std_logic_vector(((2 * width) - 1) downto 0);
@@ -141,5 +157,16 @@ EFFECTS         : EffectRouting port map( clk           => clk,
                                           audioIn       => audioRaw,
                                           audioOut      => audioProcessed
                                           );
+                                          
+UART_SEND       : state_monitor_send port map ( CLK100MHZ       => clk,
+                                                RST             => '0',
+                                                sw              => switch,
+                                                btnL            => '0',
+                                                btnC            => '0',
+                                                btnR            => '0',
+                                                btnU            => '0',
+                                                UART_TXD        => uartTx,
+                                                UART_RXD        => uartRx
+                                                );
 
 end Behavioral;

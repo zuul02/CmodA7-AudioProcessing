@@ -92,7 +92,7 @@ begin
     ------------------------------------------------------------------------------
     uart_inst : entity work.UART
         generic map(
-            CLK_FREQ      => 100_000_000,  -- 100 MHz
+            CLK_FREQ      => 12_000_000,  -- 100 MHz
             BAUD_RATE     => 115200,       -- gewünschte Baudrate
             PARITY_BIT    => "none",
             USE_DEBOUNCER => False
