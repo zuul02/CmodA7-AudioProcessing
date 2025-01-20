@@ -103,6 +103,7 @@ signal transmitEnable   : std_logic;
 signal muxAddr          : std_logic_vector(1 downto 0) := "01";
 
 signal delayTime        : std_logic_vector(15 downto 0);
+signal switchMonitor    : std_logic_vector(10 downto 0);
 
 begin
 
@@ -113,6 +114,9 @@ sda <= '0';
 --MUX config
 muxA <= muxAddr(0);
 muxB <= muxAddr(1);
+
+--Switches for Uart
+switchMonitor <= "000000" & switch;
 
 --component routing
 SIGNAL_COMB     : process(audioProcessed)
@@ -160,7 +164,7 @@ EFFECTS         : EffectRouting port map( clk           => clk,
                                           
 UART_SEND       : state_monitor_send port map ( CLK100MHZ       => clk,
                                                 RST             => '0',
-                                                sw              => switch,
+                                                sw              => switchMonitor,
                                                 btnL            => '0',
                                                 btnC            => '0',
                                                 btnR            => '0',

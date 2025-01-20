@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Sun Jan 19 19:02:12 2025
--- Host        : DESKTOP-SSD97QA running 64-bit major release  (build 9200)
+-- Date        : Mon Jan 20 08:55:01 2025
+-- Host        : HSchmidt running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/hmsch/Documents/temp/testbench2/testbench2.gen/sources_1/ip/xadc_wiz_1/xadc_wiz_1_stub.vhdl
+--               c:/Users/Ausbildung/Documents/GitHub/CmodA7-AudioProcessing/testbench2.gen/sources_1/ip/xadc_wiz_1/xadc_wiz_1_stub.vhdl
 -- Design      : xadc_wiz_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1
